@@ -7,7 +7,7 @@ import {
   WindowHeader as WH,
   WindowAction,
   WindowName as WN,
-} from "@/lib/dayos/window";
+} from "@dayos/core";
 import { cn } from "@/lib/utils";
 
 /**

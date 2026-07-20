@@ -8,17 +8,17 @@
     "start": "next start",
     "lint": "biome check",
     "format": "biome format --write",
-    "test": "vitest run",
+    "test": "vitest run --passWithNoTests",
     "test:watch": "vitest"
   },
   "dependencies": {
-    "class-variance-authority": "0.7.1",
+    "@dayos/core": "0.1.0",
+    "@dayos/next": "0.1.0",
     "clsx": "2.1.1",
     "lucide-react": "1.25.0",
     "next": "16.2.10",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "react-rnd": "10.5.3",
     "tailwind-merge": "3.6.0"
   },
   "devDependencies": {

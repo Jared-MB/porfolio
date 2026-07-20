@@ -1,4 +1,4 @@
-import { DesktopIcon as DI, DesktopIconText as DIT } from "@/lib/dayos/desktop";
+import { DesktopIcon as DI, DesktopIconText as DIT } from "@dayos/core";
 import { cn } from "@/lib/utils";
 
 /** El aspecto de los íconos del escritorio; dayos solo aporta el comportamiento. */

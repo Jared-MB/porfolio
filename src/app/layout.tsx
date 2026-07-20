@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Manrope } from "next/font/google";
 import "./globals.css";
+import { RoutedDesktop, WindowRouteProvider } from "@dayos/next";
 import { CV } from "@/components/cv";
 import { Documents } from "@/components/documents";
 import { Github } from "@/components/github";
 import { Home } from "@/components/home";
 import { Linkedin } from "@/components/linkedin";
-import { RoutedDesktop, WindowRouteProvider } from "@/lib/dayos/next";
 import { DESKTOP_ROUTES } from "@/lib/routes";
 
 const manropeSans = Manrope({

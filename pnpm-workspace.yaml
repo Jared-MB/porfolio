@@ -3,3 +3,6 @@ allowBuilds:
 ignoredBuiltDependencies:
   - sharp
   - unrs-resolver
+minimumReleaseAgeExclude:
+  - '@dayos/core@0.1.0'
+  - '@dayos/next@0.1.0'

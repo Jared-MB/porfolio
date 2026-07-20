@@ -8,9 +8,12 @@ importers:
 
   .:
     dependencies:
-      class-variance-authority:
-        specifier: 0.7.1
-        version: 0.7.1
+      '@dayos/core':
+        specifier: 0.1.0
+        version: 0.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@dayos/next':
+        specifier: 0.1.0
+        version: 0.1.0(@dayos/core@0.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(next@16.2.10(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -26,9 +29,6 @@ importers:
       react-dom:
         specifier: 19.2.4
         version: 19.2.4(react@19.2.4)
-      react-rnd:
-        specifier: 10.5.3
-        version: 10.5.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       tailwind-merge:
         specifier: 3.6.0
         version: 3.6.0
@@ -213,6 +213,20 @@ packages:
   '@csstools/css-tokenizer@4.0.0':
     resolution: {integrity: sha512-QxULHAm7cNu72w97JUNCBFODFaXpbDg+dP8b/oWFAZ2MTRppA3U00Y2L1HqaS4J6yBqxwa/Y3nMBaxVKbB/NsA==}
     engines: {node: '>=20.19.0'}
+
+  '@dayos/core@0.1.0':
+    resolution: {integrity: sha512-Woj5T6+KJ8voKaClrJkIrkbkpdO3ztvcHMGl6EfNOWtH7SclZ26FsclSvAWDUzhQGiE8ld0RqO3+Tfn9RXPH9Q==}
+    peerDependencies:
+      react: ^19.0.0
+      react-dom: ^19.0.0
+
+  '@dayos/next@0.1.0':
+    resolution: {integrity: sha512-eTa7gfwIbHEEG9pcl+OrkIhwgIoKuTWVs+cgAjmlShGVeO6BtLVEGMy2OhSfaXMgLvx7GqHpk8Jnh+sAFAzOKw==}
+    peerDependencies:
+      '@dayos/core': ^0.1.0
+      next: ^16.0.0
+      react: ^19.0.0
+      react-dom: ^19.0.0
 
   '@emnapi/core@1.11.1':
     resolution: {integrity: sha512-RSvbQmHzdKzNsLYa/wHrbc3KN4sYLKAdPZxqiM2HATqv/SBk2/ENSHpvXGaLOMcsAyz0poEGqkmmKYG3OWiJEQ==}
@@ -789,9 +803,6 @@ packages:
   chai@6.2.2:
     resolution: {integrity: sha512-NUPRluOfOiTKBKvWPtSD4PhFvWCqOi0BGStNWs57X9js7XGTprSmFoz5F0tWhR4WPjNeR9jXqdC7/UpSJTnlRg==}
     engines: {node: '>=18'}
-
-  class-variance-authority@0.7.1:
-    resolution: {integrity: sha512-Ka+9Trutv7G8M6WT6SeiRWz792K5qEqIGEGzXKhAE6xOWAY6pPH8U+9IY3oCMv6kqTmLsv7Xh/2w2RigkePMsg==}
 
   client-only@0.0.1:
     resolution: {integrity: sha512-IV3Ou0jSMzZrd3pZ48nLkT9DA7Ag1pnPzaiQhpW7c3RbcqqzvzzVu+L8gfqMp/8IM2MQtSiqaCxrrcfu8I8rMA==}
@@ -1410,6 +1421,21 @@ snapshots:
 
   '@csstools/css-tokenizer@4.0.0': {}
 
+  '@dayos/core@0.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      clsx: 2.1.1
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+      react-rnd: 10.5.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      tailwind-merge: 3.6.0
+
+  '@dayos/next@0.1.0(@dayos/core@0.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(next@16.2.10(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@dayos/core': 0.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      next: 16.2.10(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+
   '@emnapi/core@1.11.1':
     dependencies:
       '@emnapi/wasi-threads': 1.2.2
@@ -1834,10 +1860,6 @@ snapshots:
   caniuse-lite@1.0.30001806: {}
 
   chai@6.2.2: {}
-
-  class-variance-authority@0.7.1:
-    dependencies:
-      clsx: 2.1.1
 
   client-only@0.0.1: {}
 

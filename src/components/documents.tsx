@@ -1,8 +1,8 @@
 "use client";
 
+import { DesktopApp } from "@dayos/core";
+import { useWindowRoute } from "@dayos/next";
 import { Folder, Square, X } from "lucide-react";
-import { DesktopApp } from "@/lib/dayos/desktop";
-import { useWindowRoute } from "@/lib/dayos/next";
 import { ROUTES } from "@/lib/routes";
 import { DesktopIcon, DesktopIconText } from "./ui/desktop";
 import {

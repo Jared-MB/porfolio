@@ -1,5 +1,5 @@
+import { DesktopApp } from "@dayos/core";
 import Link from "next/link";
-import { DesktopApp } from "@/lib/dayos/desktop";
 import { DesktopIcon, DesktopIconText } from "./ui/desktop";
 
 export function Linkedin() {
