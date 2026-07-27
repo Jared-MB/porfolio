@@ -10,7 +10,7 @@ export function DesktopIcon({
   return (
     <DI
       className={cn(
-        "flex cursor-pointer flex-col items-center justify-center gap-1 rounded-md p-1 hover:bg-current/10 focus-visible:bg-current/10",
+        "flex cursor-pointer flex-col items-center justify-center gap-1 rounded-md p-1 hover:bg-current/10 focus-visible:bg-current/10 w-24",
         className,
       )}
       {...props}
@@ -22,5 +22,10 @@ export function DesktopIconText({
   className,
   ...props
 }: React.ComponentProps<typeof DIT>) {
-  return <DIT className={cn("select-none text-sm", className)} {...props} />;
+  return (
+    <DIT
+      className={cn("select-none text-sm text-balance", className)}
+      {...props}
+    />
+  );
 }
