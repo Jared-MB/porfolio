@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@dayos/core':
-        specifier: 0.1.0
-        version: 0.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: 0.2.2
+        version: 0.2.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@dayos/next':
-        specifier: 0.1.0
-        version: 0.1.0(@dayos/core@0.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(next@16.2.10(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: 0.2.2
+        version: 0.2.2(@dayos/core@0.2.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(next@16.2.10(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -214,16 +214,16 @@ packages:
     resolution: {integrity: sha512-QxULHAm7cNu72w97JUNCBFODFaXpbDg+dP8b/oWFAZ2MTRppA3U00Y2L1HqaS4J6yBqxwa/Y3nMBaxVKbB/NsA==}
     engines: {node: '>=20.19.0'}
 
-  '@dayos/core@0.1.0':
-    resolution: {integrity: sha512-Woj5T6+KJ8voKaClrJkIrkbkpdO3ztvcHMGl6EfNOWtH7SclZ26FsclSvAWDUzhQGiE8ld0RqO3+Tfn9RXPH9Q==}
+  '@dayos/core@0.2.2':
+    resolution: {integrity: sha512-jDv7VofTX7eh9mEvkZ5l76X0RtaFXV8dy5OYSKL+qZB8TASdt7ywReuNg33VgmSKrNK2fUkfF73dkAxrQUZtsQ==}
     peerDependencies:
       react: ^19.0.0
       react-dom: ^19.0.0
 
-  '@dayos/next@0.1.0':
-    resolution: {integrity: sha512-eTa7gfwIbHEEG9pcl+OrkIhwgIoKuTWVs+cgAjmlShGVeO6BtLVEGMy2OhSfaXMgLvx7GqHpk8Jnh+sAFAzOKw==}
+  '@dayos/next@0.2.2':
+    resolution: {integrity: sha512-yiOuty1NE8NQRQve0EJNN3OCNwM03ZOYPYq7UQXt7J1wBwVoA8+qd67I5wES/2NWu8ukLfklP0uz0c/kHN9PhQ==}
     peerDependencies:
-      '@dayos/core': ^0.1.0
+      '@dayos/core': ^0.2.2
       next: ^16.0.0
       react: ^19.0.0
       react-dom: ^19.0.0
@@ -1421,7 +1421,7 @@ snapshots:
 
   '@csstools/css-tokenizer@4.0.0': {}
 
-  '@dayos/core@0.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+  '@dayos/core@0.2.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
       clsx: 2.1.1
       react: 19.2.4
@@ -1429,9 +1429,9 @@ snapshots:
       react-rnd: 10.5.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       tailwind-merge: 3.6.0
 
-  '@dayos/next@0.1.0(@dayos/core@0.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(next@16.2.10(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+  '@dayos/next@0.2.2(@dayos/core@0.2.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(next@16.2.10(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
-      '@dayos/core': 0.1.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@dayos/core': 0.2.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       next: 16.2.10(babel-plugin-react-compiler@1.0.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
