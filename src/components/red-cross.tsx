@@ -2,10 +2,10 @@
 
 import { DesktopApp } from "@dayos/core";
 import { useWindowRoute } from "@dayos/next";
-import { FileText, Square, X } from "lucide-react";
+import { Square, X } from "lucide-react";
+import Image from "next/image";
 import { ROUTES } from "@/lib/routes";
 import { DesktopIcon, DesktopIconText } from "./ui/desktop";
-
 import {
   Window,
   WindowActions,
@@ -16,33 +16,39 @@ import {
   WindowName,
 } from "./ui/window";
 
-const HREF = ROUTES.home;
+const HREF = ROUTES["red-cross"];
 
-export function Home() {
+export function RedCross() {
   return (
     <DesktopApp id={HREF}>
-      <HomeShell />
+      <RedCrossShell />
     </DesktopApp>
   );
 }
 
-function HomeShell() {
+function RedCrossShell() {
   const content = useWindowRoute();
 
   return (
     <>
       <DesktopIcon>
-        <FileText className="size-12" />
-        <DesktopIconText>about-me.txt</DesktopIconText>
+        <Image
+          src="/cruz-roja.avif"
+          alt="Mexican Red Cross"
+          className="size-12 aspect-8/9 object-contain"
+          width={64}
+          height={72}
+        />
+        <DesktopIconText>Mexican Red Cross</DesktopIconText>
       </DesktopIcon>
       <Window
         defaultSize={{
-          height: 540,
-          width: 760,
+          height: 720,
+          width: 1080,
         }}
       >
         <WindowHeader>
-          <WindowName>about-me.txt</WindowName>
+          <WindowName>Mexican Red Cross</WindowName>
           <WindowActions>
             <WindowExpand>
               <Square className="size-4" />

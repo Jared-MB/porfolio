@@ -2,10 +2,10 @@
 
 import { DesktopApp } from "@dayos/core";
 import { useWindowRoute } from "@dayos/next";
-import { FileText, Square, X } from "lucide-react";
+import { Square, X } from "lucide-react";
+import Image from "next/image";
 import { ROUTES } from "@/lib/routes";
 import { DesktopIcon, DesktopIconText } from "./ui/desktop";
-
 import {
   Window,
   WindowActions,
@@ -16,33 +16,34 @@ import {
   WindowName,
 } from "./ui/window";
 
-const HREF = ROUTES.home;
+const HREF = ROUTES.gst;
 
-export function Home() {
+export function GST() {
   return (
     <DesktopApp id={HREF}>
-      <HomeShell />
+      <GSTShell />
     </DesktopApp>
   );
 }
 
-function HomeShell() {
+function GSTShell() {
   const content = useWindowRoute();
 
   return (
     <>
       <DesktopIcon>
-        <FileText className="size-12" />
-        <DesktopIconText>about-me.txt</DesktopIconText>
+        <Image
+          src="/gst.avif"
+          alt="GST"
+          className="size-12 object-contain"
+          width={48}
+          height={48}
+        />
+        <DesktopIconText>Transportes Bonampak</DesktopIconText>
       </DesktopIcon>
-      <Window
-        defaultSize={{
-          height: 540,
-          width: 760,
-        }}
-      >
+      <Window>
         <WindowHeader>
-          <WindowName>about-me.txt</WindowName>
+          <WindowName>Transportes Bonampak</WindowName>
           <WindowActions>
             <WindowExpand>
               <Square className="size-4" />

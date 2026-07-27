@@ -2,10 +2,10 @@
 
 import { DesktopApp } from "@dayos/core";
 import { useWindowRoute } from "@dayos/next";
-import { FileText, Square, X } from "lucide-react";
+import { Square, X } from "lucide-react";
+import Image from "next/image";
 import { ROUTES } from "@/lib/routes";
 import { DesktopIcon, DesktopIconText } from "./ui/desktop";
-
 import {
   Window,
   WindowActions,
@@ -16,33 +16,34 @@ import {
   WindowName,
 } from "./ui/window";
 
-const HREF = ROUTES.home;
+const HREF = ROUTES.kristall;
 
-export function Home() {
+export function Kristall() {
   return (
     <DesktopApp id={HREF}>
-      <HomeShell />
+      <KristallShell />
     </DesktopApp>
   );
 }
 
-function HomeShell() {
+function KristallShell() {
   const content = useWindowRoute();
 
   return (
     <>
       <DesktopIcon>
-        <FileText className="size-12" />
-        <DesktopIconText>about-me.txt</DesktopIconText>
+        <Image
+          src="/kristall.webp"
+          alt="Kristall Logo"
+          className="size-12"
+          width={48}
+          height={48}
+        />
+        <DesktopIconText>Kristall</DesktopIconText>
       </DesktopIcon>
-      <Window
-        defaultSize={{
-          height: 540,
-          width: 760,
-        }}
-      >
+      <Window>
         <WindowHeader>
-          <WindowName>about-me.txt</WindowName>
+          <WindowName>Kristall</WindowName>
           <WindowActions>
             <WindowExpand>
               <Square className="size-4" />

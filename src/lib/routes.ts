@@ -13,6 +13,13 @@ export const ROUTES = {
   github: "/github",
   documents: "/documents",
   file: "/documents/:file",
+  "red-cross": "/red-cross",
+  gst: "/gst",
+  kristall: "/kristall",
+  "open-js-chat": "/open-js-chat",
+  dayos: "/dayos",
+  sfb: "/sfb",
+  "are-we-playing": "/are-we-playing",
 } as const;
 
 /** Lo que el provider necesita para saber qué ventana abrir en cada URL. */

@@ -2,10 +2,9 @@
 
 import { DesktopApp } from "@dayos/core";
 import { useWindowRoute } from "@dayos/next";
-import { FileText, Square, X } from "lucide-react";
+import { FileArchive, Square, X } from "lucide-react";
 import { ROUTES } from "@/lib/routes";
 import { DesktopIcon, DesktopIconText } from "./ui/desktop";
-
 import {
   Window,
   WindowActions,
@@ -16,33 +15,33 @@ import {
   WindowName,
 } from "./ui/window";
 
-const HREF = ROUTES.home;
+const HREF = ROUTES.dayos;
 
-export function Home() {
+export function Dayos() {
   return (
     <DesktopApp id={HREF}>
-      <HomeShell />
+      <DayosShell />
     </DesktopApp>
   );
 }
 
-function HomeShell() {
+function DayosShell() {
   const content = useWindowRoute();
 
   return (
     <>
       <DesktopIcon>
-        <FileText className="size-12" />
-        <DesktopIconText>about-me.txt</DesktopIconText>
+        <FileArchive className="size-12" />
+        <DesktopIconText>DayOS</DesktopIconText>
       </DesktopIcon>
       <Window
         defaultSize={{
-          height: 540,
-          width: 760,
+          height: 600,
+          width: 1180,
         }}
       >
         <WindowHeader>
-          <WindowName>about-me.txt</WindowName>
+          <WindowName>DayOS</WindowName>
           <WindowActions>
             <WindowExpand>
               <Square className="size-4" />

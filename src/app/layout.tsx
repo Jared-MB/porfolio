@@ -2,11 +2,18 @@ import type { Metadata } from "next";
 import { Geist_Mono, Manrope } from "next/font/google";
 import "./globals.css";
 import { RoutedDesktop, WindowRouteProvider } from "@dayos/next";
+import { AreWePlaying } from "@/components/are-we-playing";
 import { CV } from "@/components/cv";
+import { Dayos } from "@/components/dayos";
 import { Documents } from "@/components/documents";
 import { Github } from "@/components/github";
+import { GST } from "@/components/gst";
 import { Home } from "@/components/home";
+import { Kristall } from "@/components/kristall";
 import { Linkedin } from "@/components/linkedin";
+import { OpenJSChat } from "@/components/open-js-chat";
+import { RedCross } from "@/components/red-cross";
+import { SuspenseFallbackDebugger } from "@/components/sfb";
 import { DESKTOP_ROUTES } from "@/lib/routes";
 
 const manropeSans = Manrope({
@@ -49,13 +56,23 @@ export default function RootLayout({
           */}
           <RoutedDesktop className="grid h-dvh max-h-dvh w-full grid-cols-2 grid-rows-2 bg-background p-4 text-foreground [&[data-interacting]_iframe]:pointer-events-none">
             <div className="grid grid-cols-2 w-fit h-fit gap-4">
-              <Home title="about-me.txt" />
+              <Home />
               <CV />
               <Github />
               <Linkedin />
             </div>
-            <div></div>
-            <div></div>
+            <div className="ml-auto grid grid-cols-2 w-fit h-fit gap-4">
+              <RedCross />
+              <GST />
+              <div />
+              <Kristall />
+            </div>
+            <div className="mr-auto mt-auto grid grid-cols-2 w-fit h-fit gap-4">
+              <OpenJSChat />
+              <Dayos />
+              <SuspenseFallbackDebugger />
+              <AreWePlaying />
+            </div>
             <div className="ml-auto mt-auto">
               <Documents />
             </div>

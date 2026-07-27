@@ -2,10 +2,9 @@
 
 import { DesktopApp } from "@dayos/core";
 import { useWindowRoute } from "@dayos/next";
-import { FileText, Square, X } from "lucide-react";
+import { AppWindow, Square, X } from "lucide-react";
 import { ROUTES } from "@/lib/routes";
 import { DesktopIcon, DesktopIconText } from "./ui/desktop";
-
 import {
   Window,
   WindowActions,
@@ -16,33 +15,28 @@ import {
   WindowName,
 } from "./ui/window";
 
-const HREF = ROUTES.home;
+const HREF = ROUTES["open-js-chat"];
 
-export function Home() {
+export function OpenJSChat() {
   return (
     <DesktopApp id={HREF}>
-      <HomeShell />
+      <OpenJSChatShell />
     </DesktopApp>
   );
 }
 
-function HomeShell() {
+function OpenJSChatShell() {
   const content = useWindowRoute();
 
   return (
     <>
       <DesktopIcon>
-        <FileText className="size-12" />
-        <DesktopIconText>about-me.txt</DesktopIconText>
+        <AppWindow className="size-12" />
+        <DesktopIconText>OpenJS Chat</DesktopIconText>
       </DesktopIcon>
-      <Window
-        defaultSize={{
-          height: 540,
-          width: 760,
-        }}
-      >
+      <Window>
         <WindowHeader>
-          <WindowName>about-me.txt</WindowName>
+          <WindowName>OpenJS Chat</WindowName>
           <WindowActions>
             <WindowExpand>
               <Square className="size-4" />

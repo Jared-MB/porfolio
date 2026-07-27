@@ -2,10 +2,9 @@
 
 import { DesktopApp } from "@dayos/core";
 import { useWindowRoute } from "@dayos/next";
-import { FileText, Square, X } from "lucide-react";
+import { FileArchive, Square, X } from "lucide-react";
 import { ROUTES } from "@/lib/routes";
 import { DesktopIcon, DesktopIconText } from "./ui/desktop";
-
 import {
   Window,
   WindowActions,
@@ -16,33 +15,28 @@ import {
   WindowName,
 } from "./ui/window";
 
-const HREF = ROUTES.home;
+const HREF = ROUTES.sfb;
 
-export function Home() {
+export function SuspenseFallbackDebugger() {
   return (
     <DesktopApp id={HREF}>
-      <HomeShell />
+      <SuspenseFallbackDebuggerShell />
     </DesktopApp>
   );
 }
 
-function HomeShell() {
+function SuspenseFallbackDebuggerShell() {
   const content = useWindowRoute();
 
   return (
     <>
       <DesktopIcon>
-        <FileText className="size-12" />
-        <DesktopIconText>about-me.txt</DesktopIconText>
+        <FileArchive className="size-12" />
+        <DesktopIconText>Suspense Fallback Debugger</DesktopIconText>
       </DesktopIcon>
-      <Window
-        defaultSize={{
-          height: 540,
-          width: 760,
-        }}
-      >
+      <Window>
         <WindowHeader>
-          <WindowName>about-me.txt</WindowName>
+          <WindowName>Suspense Fallback Debugger</WindowName>
           <WindowActions>
             <WindowExpand>
               <Square className="size-4" />
