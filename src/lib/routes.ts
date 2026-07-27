@@ -12,6 +12,7 @@ export const ROUTES = {
   cv: "/cv.pdf",
   github: "/github",
   documents: "/documents",
+  file: "/documents/:file",
 } as const;
 
 /** Lo que el provider necesita para saber qué ventana abrir en cada URL. */
