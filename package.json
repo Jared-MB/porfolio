@@ -9,7 +9,8 @@
     "lint": "biome check",
     "format": "biome format --write",
     "test": "vitest run --passWithNoTests",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "diagrams": "for d in src/app/dayos/diagrams/*.mmd; do npx -y @mermaid-js/mermaid-cli@11 -i \"$d\" -o \"public/dayos/$(basename \"$d\" .mmd).svg\" -b transparent; done"
   },
   "dependencies": {
     "@dayos/core": "0.2.2",

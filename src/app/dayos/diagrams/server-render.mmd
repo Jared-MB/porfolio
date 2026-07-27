@@ -1,0 +1,17 @@
+%%{init: {"theme":"base","fontFamily":"Liberation Sans, DejaVu Sans, Arial, sans-serif","themeVariables":{"background":"transparent","primaryColor":"#FEF3C7","primaryTextColor":"#38332E","primaryBorderColor":"#C2B3A3","secondaryColor":"#FFFBEB","tertiaryColor":"#F6F6EE","lineColor":"#8B7E6E","fontFamily":"Liberation Sans, DejaVu Sans, Arial, sans-serif","fontSize":"15px","actorBkg":"#FEF3C7","actorBorder":"#C2B3A3","actorTextColor":"#38332E","actorLineColor":"#C2B3A3","signalColor":"#8B7E6E","signalTextColor":"#38332E","noteBkgColor":"#FFFBEB","noteBorderColor":"#C2B3A3","noteTextColor":"#38332E","labelBoxBkgColor":"#FEF3C7","labelBoxBorderColor":"#C2B3A3","labelTextColor":"#38332E"},"sequence":{"actorMargin":70,"width":170,"boxMargin":8,"mirrorActors":false}}}%%
+sequenceDiagram
+  participant B as Browser
+  participant S as Server render
+  participant W as Window
+
+  B->>S: GET /dayos
+  Note over S: usePathname() already<br/>says "/dayos"
+  S->>S: seed openWindows during render
+  Note over S: not in an effect —<br/>the window is born open
+  S->>W: open, but desktopEl is null
+  W-->>S: StaticWindowFrame:<br/>no drag library, geometry in CSS
+  S-->>B: HTML with the window open,<br/>the page already inside it
+  Note over B: painted before React runs
+  B->>W: hydrate — the desktop mounts
+  W->>W: portal in, react-rnd takes over
+  Note over W: same size and position<br/>⇒ no jump

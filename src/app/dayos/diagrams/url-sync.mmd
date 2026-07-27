@@ -1,0 +1,22 @@
+%%{init: {"theme":"base","fontFamily":"Liberation Sans, DejaVu Sans, Arial, sans-serif","themeVariables":{"background":"transparent","primaryColor":"#FEF3C7","primaryTextColor":"#38332E","primaryBorderColor":"#C2B3A3","secondaryColor":"#FFFBEB","tertiaryColor":"#F6F6EE","lineColor":"#8B7E6E","fontFamily":"Liberation Sans, DejaVu Sans, Arial, sans-serif","fontSize":"15px"},"flowchart":{"nodeSpacing":30,"rankSpacing":45,"padding":8}}}%%
+flowchart TB
+  URL(["<b>URL</b><br/>/documents/violin.avif"])
+  Guard{"did the desktop<br/>write this URL?"}
+  Open["openWindow(href)"]
+  Skip["nothing to do"]
+  Stack(["<b>openWindows</b><br/>the focus stack"])
+  Replace["router.replace — never push,<br/>to that window's last full URL"]
+
+  URL -- "findRoute:<br/>most specific wins" --> Guard
+  Guard -- "no · the visitor navigated" --> Open
+  Guard -- "yes · selfNavigatedTo" --> Skip
+  Open --> Stack
+  Stack -- "the front window changed" --> Replace
+  Replace --> URL
+
+  style URL fill:#FEF3C7,stroke:#C2B3A3
+  style Stack fill:#FEF3C7,stroke:#C2B3A3
+  style Guard fill:#FFFBEB,stroke:#C2B3A3
+  style Open fill:#FFFBEB,stroke:#C2B3A3
+  style Replace fill:#FFFBEB,stroke:#C2B3A3
+  style Skip fill:#F6F6EE,stroke:#C2B3A3

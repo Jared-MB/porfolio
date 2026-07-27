@@ -1,0 +1,18 @@
+%%{init: {"theme":"base","fontFamily":"Liberation Sans, DejaVu Sans, Arial, sans-serif","themeVariables":{"background":"transparent","primaryColor":"#FEF3C7","primaryTextColor":"#38332E","primaryBorderColor":"#C2B3A3","secondaryColor":"#FFFBEB","tertiaryColor":"#F6F6EE","lineColor":"#8B7E6E","fontFamily":"Liberation Sans, DejaVu Sans, Arial, sans-serif","fontSize":"15px"},"flowchart":{"nodeSpacing":30,"rankSpacing":40,"padding":8}}}%%
+flowchart TB
+  Icon["<b>DesktopIcon</b><br/>double click · Enter"]
+  Stack["<b>Desktop</b><br/>openWindows: string[]<br/>the last id is the front window"]
+  Win["<b>Window</b><br/>portaled into the desktop node"]
+  Header["<b>WindowHeader</b><br/>the drag handle"]
+  Content["<b>WindowContent</b><br/>flex: 1 · scrolls"]
+
+  Icon -- "open(id)" --> Stack
+  Stack -- "includes(id) ⇒ it mounts<br/>indexOf(id) + 1 ⇒ z-index" --> Win
+  Win --> Header
+  Win --> Content
+
+  style Stack fill:#FEF3C7,stroke:#C2B3A3
+  style Icon fill:#FFFBEB,stroke:#C2B3A3
+  style Win fill:#FFFBEB,stroke:#C2B3A3
+  style Header fill:#FFFBEB,stroke:#C2B3A3
+  style Content fill:#FFFBEB,stroke:#C2B3A3
