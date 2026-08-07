@@ -212,9 +212,10 @@ function Practice() {
           this work.
         </P>
         <P>
-          And thank you, for the encouragement day after day, for making me fall
-          in love with what I do all over again, and for teaching me that the
-          people you admire can admire you back.
+          And thank you <strong className="italic">&ldquo;D&ldquo;</strong>, for
+          the encouragement day after day, for making me fall in love with what
+          I do all over again, and for teaching me that the people you admire
+          can admire you back.
         </P>
       </Section>
     </div>
